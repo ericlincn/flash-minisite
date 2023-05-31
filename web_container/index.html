@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>项目模板</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="application-name" content="Daftlib minisite">
+	<meta name="description" content="Flash minisite, actionscript, 3d, animation, multi-touch &amp; more">
+	<style type="text/css" media="screen">html,body { height:100%;margin:0;border:0; }</style>
+	<script type="text/javascript" src="js/swfobject.js"></script>
+	<script type="text/javascript" src="js/swfaddress.js"></script>
+	<script type="text/javascript" src="js/swffit.js"></script>
+	<script type="text/javascript">
+		// For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
+		var swfVersionStr = "11.1.0";
+		// To use express install, set to playerProductInstall.swf, otherwise the empty string.
+		var xiSwfUrlStr = "js/playerProductInstall.swf";
+		var flashvars = { author: "Eric.lin", company: "AMg", swfpath: "stuff/" };
+		var params = { menu: "true", allowFullScreen: "true", allowScriptAccess: "sameDomain" };
+		var attributes = { id: "flashObject" };   
+		swfobject.embedSWF(
+			"stuff/minisite.swf", "flashContainer", 
+			"100%", "100%", 
+			swfVersionStr, xiSwfUrlStr, 
+			flashvars, params, attributes);
+		swffit.fit("flashObject",1000,600);
+	</script>
+</head>
+
+<body>
+	<div id="flashContainer">
+		<p>To view this page ensure that Adobe Flash Player version 11.1.0 or greater is installed. </p>
+		<p><a href="http://www.adobe.com/go/getflashplayer"><img border="0" src="js/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p> 
+	</div>
+</body>
+
+</html>
